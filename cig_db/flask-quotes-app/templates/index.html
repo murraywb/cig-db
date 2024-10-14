@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes</title>
+</head>
+<body>
+    <h1>Approved Quotes</h1>
+    <ul>
+        {% for quote in quotes %}
+        <li>
+            <strong>{{ quote.book }}</strong> by {{ quote.author }}:<br>
+            "{{ quote.quote }}"
+            <p><i>Submitted by: {{ quote.submitted_by }}</i></p>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('submit_quote') }}">Submit a new quote</a>
+</body>
+</html>

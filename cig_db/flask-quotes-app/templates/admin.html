@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Approve Quotes</title>
+</head>
+<body>
+    <h1>Admin: Approve or Reject Quotes</h1>
+    <ul>
+        {% for quote in quotes %}
+        <li>
+            <strong>{{ quote.book }}</strong> by {{ quote.author }}:<br>
+            "{{ quote.quote }}"
+            <form method="POST" action="{{ url_for('admin') }}">
+                <input type="hidden" name="quote_id" value="{{ quote.id }}">
+                <button type="submit" name="action" value="approve">Approve</button>
+                <button type="submit" name="action" value="reject">Reject</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

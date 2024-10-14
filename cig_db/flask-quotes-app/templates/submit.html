@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Quote</title>
+</head>
+<body>
+    <h1>Submit a New Quote</h1>
+    <form method="POST" action="{{ url_for('submit_quote') }}">
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" required><br><br>
+        <label for="book">Book:</label><br>
+        <input type="text" id="book" name="book" required><br><br>
+        <label for="quote">Quote:</label><br>
+        <textarea id="quote" name="quote" required></textarea><br><br>
+        <label for="submitted_by">Your Name/Email (Optional):</label><br>
+        <input type="text" id="submitted_by" name="submitted_by"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
