@@ -5,6 +5,9 @@
     <title>Submit Quote</title>
 </head>
 <body>
+
+    <img src="{{ url_for('static', filename='cigarette.png') }}" alt="Cigarette Image" style="width:200px;height:auto;">
+
     <h1>Submit a New Quote</h1>
     <form method="POST" action="{{ url_for('submit_quote') }}">
         <label for="author">Author:</label><br>
