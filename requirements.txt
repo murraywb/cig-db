@@ -9,6 +9,7 @@ Flask==3.0.3
 Flask-SQLAlchemy==3.1.1
 folium==0.17.0
 fonttools==4.53.0
+gunicorn==23.0.0
 idna==3.7
 itsdangerous==2.2.0
 Jinja2==3.1.4
