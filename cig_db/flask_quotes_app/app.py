@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
-from config import Config
+from flask_quotes_app.config import Config
 
 # Initialize Flask app and load config
 app = Flask(__name__)
